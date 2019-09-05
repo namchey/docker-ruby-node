@@ -12,5 +12,9 @@ RUN curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip \
   && cp rclone /usr/bin/ \
   && chown root:root /usr/bin/rclone \
   && chmod 755 /usr/bin/rclone
+  
+ADD Gemfile ./Gemfile
+
+RUN gem install bundler && bundle
 
 RUN npm i -g nodemon eslint cross-env
