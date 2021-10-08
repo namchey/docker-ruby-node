@@ -1,12 +1,14 @@
 FROM ruby:2-alpine
 
-ENV NODE_MAJOR 10
+ENV NODE_MAJOR 14
 
-RUN apk add  --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/v3.10/main/ nodejs=10.19.0-r0
+RUN apk add  --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/v3.10/main/ nodejs=14.17.6-r0
 
-RUN apk add  --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/v3.10/main/ npm=10.19.0-r0
+RUN apk add  --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/v3.10/main/ npm=10.24.1-r0
 
 RUN apk add  --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/v3.10/main/ rsync=3.1.3-r1
+
+RUN apk add  --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/v3.10/main/ python2=2.7.18-r2
 
 RUN apk add --update yarn
 
